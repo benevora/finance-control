@@ -37,14 +37,14 @@ const Form = ({ handleAdd, transactionsList, setTransactionsList }) => {
     <>
       <C.Container>
         <C.InputContent>
-          <C.Label>Descricao</C.Label>
+          <C.Label>Description</C.Label>
           <C.Input 
             value={desc} 
             onChange={(e) => setDesc(e.target.value)} 
           />
         </C.InputContent>
         <C.InputContent>
-          <C.Label>Valor</C.Label>
+          <C.Label>Amount</C.Label>
           <C.Input 
             value={amount} 
             type="number"
@@ -59,16 +59,16 @@ const Form = ({ handleAdd, transactionsList, setTransactionsList }) => {
             name="group1"
             onChange={() => setExpense(!isExpense)} 
           />
-          <C.Label htmlFor="rIncome">Entrada</C.Label>
+          <C.Label htmlFor="rIncome">Income</C.Label>
           <C.Input 
             type="radio"
             id="rExpenses"
             name="group1"
             onChange={() => setExpense(!isExpense)} 
           />
-          <C.Label htmlFor="rExpenses">Saida</C.Label>
+          <C.Label htmlFor="rExpenses">Expense</C.Label>
         </C.RadioGroup>
-        <C.Button onClick={handleSave}>ADICIONAR</C.Button>
+        <C.Button onClick={handleSave}>ENTER</C.Button>
       </C.Container>
       <Grid itens={transactionsList} setItens={setTransactionsList} />
     </>
